@@ -46,6 +46,10 @@
 				} else if(_.guess == $(this).attr("data-id") && !$(this).hasClass("picked")){
 					$(".picked").addClass("matched");
 					_.guess = null;
+					// CUANDO ES CORRECTO
+					// let imgC = document.getElementById('btnFront');
+					// imgC.style.width = `${2}%`;
+					// // imgC.style.height = `${25}%`;
 				} else {
 					_.guess = null;
 					_.paused = true;
@@ -53,6 +57,7 @@
 						$(".picked").removeClass("picked");
 						Memory.paused = false;
 					}, 800);
+					console.log(`_.paused = true;`);
 				}
 				if($(".matched").length == $(".card").length){
 					_.win();
@@ -107,14 +112,11 @@
 			this.$cards.each(function(k, v){
 				frag += '<div class="card" data-id="'+ v.id +'"><div class="inside">\
 				<div class="front">\
-				<a id="btnA" style="position: absolute; left: 75%; width:25%;\
-				height: 25%; font-size: 150%; background-color: transparent;">\
-				<i class="fa fa-eye" style="color: #D01D36";></i></a>\
+				<a id="btnA" href="#"><i class="fa fa-eye"></i></a>\
 				<img id="btnFront" style="float: center;" src="'+ v.img +'"\
-				alt="'+ v.name +'" /></div>\
-				<div class="back"><img src="images/majesticcarta.jpg"\
-				alt="Majestic" /></div></div>\
-				</div>';
+				alt="'+ v.name +'"/></div>\
+				<div class="back"><img src="images/majesticcarta.jpg" alt="Majestic"/>\
+				</div></div></div>';
 			});
 			return frag;
 		}

@@ -90,8 +90,16 @@ b@import url(http://weloveiconfonts.com/api/?family=brandico);
   margin: 0 auto;
   max-height: 100%;
   vertical-align: middle;
-
 }
+
+.card .front img {
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
 .card .front {
   transform: rotateY(-180deg);
   background-color: #fff;

@@ -869,8 +869,22 @@ button::-moz-focus-inner {
         margin-top: 300px;
     }
 
-#btnA:active ~ #btnFront{
-    transform: scale(1.9) translate(-11%, -18%);
-}
+    /* #btnA:active ~ #btnFront{
+        transform: scale(1.9) translate(-11%, -18%);
+    } */
+    #btnA{
+        position: absolute; left: 75%; width:25%;
+        height: 25%; font-size: 150%; background-color: transparent;
+    } 
+    #btnA i {
+        color: #D01D36
+    }
+    /* #btnA:hover{
+        -moz-transform: scale(2);
+        -ms-transform: scale(2);
+        -o-transform: scale(2);
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }  */
 
 
